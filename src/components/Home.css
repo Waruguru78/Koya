@@ -1,0 +1,104 @@
+/* src/components/Home.css */
+
+/* Add this at the top of the file */
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
+
+.home {
+    position: relative;
+    text-align: center;
+    color: black; /* Default text color */
+    padding: 50px 20px; /* Space at the top */
+    background: linear-gradient(to bottom, #E1B3EB 0%, #ecc7f5 20%, #ffffff 100%);
+    font-family: 'Inknut Antiqua', serif; /* Apply the font */
+}
+
+.hero-section {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between text and image */
+    padding: 0px 30px; /* Padding for the section */
+}
+
+.hero-text {
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.hero-title {
+    font-size: 48px; /* Title size */
+    font-weight: bold; /* Bold title */
+}
+
+.highlight {
+    color: #6a0dad; /* Change to your preferred highlight color */
+}
+
+.hero-subtitle {
+    font-size: 24px; /* Subtitle size */
+    margin-top: 10px; /* Space above subtitle */
+}
+
+.get-started-button {
+    background-color: #6a0dad; /* Button color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above button */
+}
+
+.get-started-button:hover {
+    opacity: 0.7; /* Slight transparency on hover */
+}
+
+.hero-image {
+    flex: 1; /* Take up remaining space */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide overflow for blending effect */
+    position: relative; /* Position for layering */
+    z-index: 1; /* Bring image on top */
+}
+
+.hero-image img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners for blending effect */
+    border: none; /* No border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    opacity: 0.7; /* Slight transparency for blending */
+}
+
+/* SVG Shape Divider Styles */
+.custom-shape-divider-bottom-1729087018 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1729087018 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px; /* Adjust height as needed */
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1729087018 .shape-fill {
+    fill: #E1B3EB; /* Color for the wave shape */
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1729087018 svg {
+        width: calc(100% + 1.3px);
+        height: 104px; /* Adjust height for smaller screens */
+    }
+}

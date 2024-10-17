@@ -1,0 +1,72 @@
+.signup{
+    background-color: blueviolet;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 20px;
+    padding-top: 60px;
+    max-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 10px;
+
+}
+.text {
+    color:whitesmoke;
+    margin-left: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heading-line {
+    width: 30%; /* Set the width of the line */
+    height: 2px; /* Thickness of the line */
+    background: linear-gradient(to right, rgb(207, 134, 221) 0%, whitesmoke 70%, rgba(106, 0, 218, 0) 100%); /* Gradient from thick to thin */
+    margin: 10px 10px; /* Center the line */
+}
+.line {
+    margin-left: 200px;
+    width: 400px;
+}
+h2 {
+    font-size: 48px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    font-size: 15px;
+    width: 500px;
+    font-family: 'Inknut Antiqua', serif;
+
+  }
+  
+  button[type="submit"] {
+    background-color: #280947;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    width: 500px;
+    cursor: pointer;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #5c3c8e;
+  }
+.card-image {
+  /* Add your desired styles for the icon here */
+  width: 100px; /* Example width */
+  height: 100px; /* Example height */
+  color: #000; /* Example color */
+}

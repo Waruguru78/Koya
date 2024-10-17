@@ -1,0 +1,32 @@
+// src/components/Home.js
+
+import React from 'react';
+import './Home.css'; // Import the CSS file for styling
+import astronautImage from '../homebg.jpg'; // Import your astronaut image
+
+const Home = () => {
+    return (
+        <div className="home">
+            <div className="hero-section">
+                <div className="hero-text">
+                    <h1 className="hero-title">
+                        Learn, build and lead <br /> in the <span className="highlight">digital world.</span>
+                    </h1>
+                    <p className="hero-subtitle">Empowering innovators with future-ready tech skills</p>
+                    <button className="get-started-button">Get Started</button>
+                </div>
+                <div className="hero-image">
+                    <img src={astronautImage} alt="Astronaut" />
+                </div>
+            </div>
+            {/* SVG Shape Divider */}
+            <div className="custom-shape-divider-bottom-1729087018">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+    );
+};
+
+export default Home;
