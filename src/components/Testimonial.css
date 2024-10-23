@@ -1,0 +1,85 @@
+.test {
+    background: linear-gradient(to bottom, #ffffff 0%, #dbd4dd 20%, #E1B3EB 100%);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.testimonial-section {
+    background: linear-gradient(to bottom, #ead9ee, #ffffff);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-heading {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 36px;
+    color: #000000; /* Purple color for the heading */
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background: #f7f7f7; /* Light background for the card */
+    border-radius: 15px;
+    padding: 30px;
+    font-family: 'Inknut Antiqua', serif;
+    position: relative;
+    display: flex;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quote-mark {
+    font-size: 48px;
+    color: #000000; /* Purple color for the quote mark */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.testimonial-quote {
+    font-size: 15px;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.attribution {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #6a0dad; /* Purple for author's name */
+}
+
+.author-title {
+    color: #777; /* Grey for author's title */
+}
+
+.navigation-arrows {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6a0dad; /* Purple color for arrows */
+}
+
+.arrow:hover {
+    color: #0c0114; /* Change color on hover */
+}
+.head-line {
+    width: 20%; /* Set the width of the line */
+    height: 2px; /* Thickness of the line */
+    background: linear-gradient(to right, rgb(172, 37, 199) 0%, rgb(218, 171, 230) 70%, rgba(106, 0, 218, 0) 100%); /* Gradient from thick to thin */
+    margin: 5px auto; /* Center the line */
+}

@@ -1,23 +1,29 @@
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-// import About from './components/About';
-// import Courses from './components/Courses';
-// import Testimonials from './components/Testimonials';
-// import Contact from './components/Contact';
- import Header from './components/Header';
-import About from './components/About';
+import About from './components/About'; 
+import Courses from './components/Courses';
 import SignUp from './components/SignUp';
-// import Footer from './components/Footer';
+import Testimonial from './components/Testimonials';
+import AllCourses from './components/AllCourses';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Home />
-      <About />
-      <SignUp />
-    </div>
-    
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Home />
+            <About />
+            <SignUp />
+            <Testimonial />
+            <Courses />
+          </>
+        } />
+        <Route path="/allcourses" element={<AllCourses />} /> {/* All Courses route */}
+      </Routes>
+    </Router>
   );
 }
 

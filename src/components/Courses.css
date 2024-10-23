@@ -1,0 +1,106 @@
+.courses {
+    background-color: #af62ee;
+    font-family: 'Inknut Antiqua', serif;
+    padding: 20px 10%;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.headline {
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(252, 252, 252) 0%, rgb(156, 107, 167) 70%, rgba(94, 53, 138, 0) 100%);
+    margin: 5px auto;
+}
+
+.courses-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courses-heading {
+    font-size: 48px;
+    color: white;
+    font-family: 'Inknut Antiqua', serif;
+    margin-right: 40px;
+    white-space: nowrap;
+}
+
+.courses-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.course-card {
+    background-color: #8A3BF2;
+    color: whitesmoke;
+    padding: 20px; /* Adjusted padding */
+    border-radius: 20px;
+    width: 350px; /* Adjusted width */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.course-card h3 {
+    font-size: 22px; /* Adjusted font size */
+    margin-bottom: 15px;
+    color: #fcfcfc;
+}
+
+.course-card p {
+    font-size: 20px; /* Adjusted font size */
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #fcfcfc;
+}
+
+.read-more-btn {
+    background-color: white;
+    color: #6A0DAD;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.read-more-btn:hover {
+    background-color: #6A0DAD;
+    color: white;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.view-all-btn {
+    background-color: #fcfcfc;
+    color: #6A0DAD;
+    padding: 10px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-right: -30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.view-all-btn:hover {
+    color: white;
+    background-color: #6A0DAD;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
