@@ -6,6 +6,8 @@ import SignUp from './components/SignUp';
 import Testimonial from './components/Testimonials';
 import AllCourses from './components/AllCourses';
 import Header from './components/Header';
+import Why from './components/why';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <SignUp />
             <Testimonial />
             <Courses />
+            <Why />
+            <Footer />
           </>
         } />
         <Route path="/allcourses" element={<AllCourses />} /> {/* All Courses route */}

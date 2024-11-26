@@ -1,78 +1,85 @@
-/* src/components/Home.css */
-
-/* Add this at the top of the file */
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
-
 .home {
     position: relative;
     text-align: center;
-    color: black; /* Default text color */
-    padding: 50px 20px; /* Space at the top */
+    color: black;
+    padding: 50px 20px;
     background: linear-gradient(to bottom, #E1B3EB 0%, #ecc7f5 20%, #ffffff 100%);
-    font-family: 'Inknut Antiqua', serif; /* Apply the font */
+    font-family: 'Inknut Antiqua', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-section {
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center vertically */
-    justify-content: space-between; /* Space between text and image */
-    padding: 0px 30px; /* Padding for the section */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-text {
-    flex: 1; /* Take up remaining space */
-    text-align: left; /* Align text to the left */
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
 }
 
 .hero-title {
-    font-size: 48px; /* Title size */
-    font-weight: bold; /* Bold title */
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 1.8;
 }
 
 .highlight {
-    color: #6a0dad; /* Change to your preferred highlight color */
+    color: #661f99;
 }
 
 .hero-subtitle {
-    font-size: 24px; /* Subtitle size */
-    margin-top: 10px; /* Space above subtitle */
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .get-started-button {
-    background-color: #6a0dad; /* Button color */
-    color: white; /* Text color */
-    padding: 12px 20px; /* Button padding */
-    border: none; /* No border */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 20px; /* Space above button */
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .get-started-button:hover {
-    opacity: 0.7; /* Slight transparency on hover */
+    opacity: 0.7;
 }
 
 .hero-image {
-    flex: 1; /* Take up remaining space */
-    display: flex; /* Flexbox for alignment */
-    justify-content: center; /* Center the image */
-    align-items: center; /* Center vertically */
-    overflow: hidden; /* Hide overflow for blending effect */
-    position: relative; /* Position for layering */
-    z-index: 1; /* Bring image on top */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    max-width: 700px;
+    padding-left: 20px;
+    overflow: hidden;
 }
 
 .hero-image img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 20px; /* Rounded corners for blending effect */
-    border: none; /* No border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
-    opacity: 0.7; /* Slight transparency for blending */
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 20px;
+    opacity: 0.5;
+    box-shadow: 0 4px 15px rgba(101, 97, 97, 0.2);
 }
 
-/* SVG Shape Divider Styles */
 .custom-shape-divider-bottom-1729087018 {
     position: absolute;
     bottom: 0;
@@ -87,18 +94,40 @@
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 200px; /* Adjust height as needed */
+    height: 200px;
     transform: rotateY(180deg);
 }
 
 .custom-shape-divider-bottom-1729087018 .shape-fill {
-    fill: #E1B3EB; /* Color for the wave shape */
+    fill: #E1B3EB;
 }
 
-/** For mobile devices **/
 @media (max-width: 767px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .hero-title{
+        font-size: 30px;
+    }
+
+    .get-started-button {
+        margin-top: 15px;
+    }
+
     .custom-shape-divider-bottom-1729087018 svg {
         width: calc(100% + 1.3px);
-        height: 104px; /* Adjust height for smaller screens */
+        height: 90px;
     }
 }

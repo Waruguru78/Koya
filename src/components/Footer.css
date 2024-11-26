@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Inknut Antiqua', serif;
+    margin: 0;
+    padding: 0;
+}
+img {
+    height: 70px; /* Adjust height of logo */
+    width: 100px;
+    padding: 5px;
+  }
+
+/* Footer Main Container */
+.footer-container {
+    position: relative;
+    background: #A67EFF;  /* Footer background color */
+    color: #fff;
+    padding: 50px 10%;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+/* Create the wave shape divider at the top of the footer */
+.custom-shape-divider-top {
+    position: absolute;
+    top: -70px; /* Adjust the height to control how far the wave goes up */
+    left: 0;
+    width: 100%;
+    height: 120px;  /* Adjust height of the wave */
+    background: #A67EFF;  /* Match footer color */
+    z-index: 1;  /* Ensure wave stays below the footer content */
+}
+
+.custom-shape-divider-top svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.shape-fill {
+    fill: #ffffff;  /* Wave color should match footer color */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 2;  /* Ensure footer content appears above the wave */
+}
+
+/* Footer Logo Section */
+.footer-logo-section {
+    max-width: 250px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-address {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #6a0dad;
+}
+
+/* Footer Links Section */
+.footer-links {
+    max-width: 200px;
+}
+
+.footer-links h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    font-size: 14px;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.footer-links ul li:hover {
+    /* text-decoration: underline; */
+    color: #6a0dad;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 20px;
+        max-width: none;
+    }
+
+    .footer-logo-section {
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .footer-address {
+        font-size: 16px;
+    }
+
+    .footer-links ul li {
+        font-size: 16px;
+    }
+
+    .footer-links h4 {
+        font-size: 18px;
+    }
+    .custom-shape-divider-top {
+        height: 120px;
+        top: -50px;
+    }
+}

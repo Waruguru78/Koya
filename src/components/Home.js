@@ -1,5 +1,3 @@
-// src/components/Home.js
-
 import React from 'react';
 import './Home.css'; // Import the CSS file for styling
 import astronautImage from '../homebg.jpg'; // Import your astronaut image
@@ -19,6 +17,7 @@ const Home = () => {
                     <img src={astronautImage} alt="Astronaut" />
                 </div>
             </div>
+
             {/* SVG Shape Divider */}
             <div className="custom-shape-divider-bottom-1729087018">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

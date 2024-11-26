@@ -9,7 +9,7 @@ const testimonials = [
         title: "Graduate, Software Development Program",
     },
     {
-        quote: "At Koya Tech, I found a community of strong, supportive women. The skills I’ve gained in coding and data analysis are just the beginning—I’ve also made lifelong friendships that inspire me every day.",
+        quote: "At Koya Tech, I found a community of strong, supportive women. The skills I’ve gained in data analysis are just the beginning—I’ve also made lifelong friendships that inspire me every day.",
         name: "Maya Singh",
         title: "Current Student, Data Science Program",
     },
