@@ -70,3 +70,49 @@ form {
   height: 100px; /* Example height */
   color: #000; /* Example color */
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .signup {
+      flex-direction: column; /* Arrange elements vertically */
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .icon{
+    display: none;
+  }
+  .text {
+      margin-left: 0; /* Center the text */
+      margin-bottom: -90px; /* Add spacing below the text */
+      font-size: 16px; /* Reduce text size */
+  }
+
+  h2 {
+      font-size: 22px; /* Reduce heading size */
+  }
+
+  .line {
+      margin-left: 0; /* Center the line */
+      width: 90%; /* Adjust width to fit smaller screens */
+  }
+
+  input[type="text"] {
+      width: 90%; /* Adjust width to fit smaller screens */
+      max-width: 400px; /* Maintain a maximum width */
+      font-size: 13px; /* Reduce font size for input text */
+      padding: 2px; /* Adjust padding */
+  }
+
+  button[type="submit"] {
+      width: 90%; /* Adjust width to fit smaller screens */
+      max-width: 400px; /* Maintain a maximum width */
+      font-size: 13px; /* Reduce font size for button text */
+      padding: 4px; /* Adjust padding */
+      margin-top: -10px;
+  }
+  form {
+    margin-top: 85px; /* Increase the space between heading and form */
+}
+
+}
+

@@ -16,7 +16,7 @@ const testimonials = [
     {
         quote: "Koya Tech School is more than just a place to learn; it's a place where girls like me can break barriers in technology. I’m proud to be part of a school that champions women in STEM!",
         name: "Zoe Martinez",
-        title: "Parent of a Current Student",
+        title: "Current Student, UI/UX Design",
     },
 ];
 

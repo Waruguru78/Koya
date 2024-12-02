@@ -1,50 +1,60 @@
+/* src/components/Testimonial.css */
+
+/* General styling for the entire testimonial section */
 .test {
     background: linear-gradient(to bottom, #ffffff 0%, #dbd4dd 20%, #E1B3EB 100%);
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+/* Styling for the testimonial section container */
 .testimonial-section {
-    /* background: linear-gradient(to bottom, #ead9ee, #ffffff); */
     padding: 50px 20px;
     text-align: center;
     position: relative;
     max-width: 800px;
     margin: auto;
     border-radius: 15px;
-    /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Testimonial heading styling */
 .testimonial-heading {
     font-family: 'Inknut Antiqua', serif;
     font-size: 36px;
-    color: #000000; /* Purple color for the heading */
+    color: #000000;
     margin-bottom: 20px;
 }
 
+/* Styling for the testimonial card */
 .testimonial-card {
-    background: #f7f7f7; /* Light background for the card */
+    background: #f7f7f7;
     border-radius: 15px;
     padding: 30px;
     font-family: 'Inknut Antiqua', serif;
     position: relative;
     display: flex;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
+/* Styling for the quote mark */
 .quote-mark {
     font-size: 48px;
-    color: #000000; /* Purple color for the quote mark */
+    color: #000000;
     position: absolute;
     top: -20px;
     left: -20px;
 }
 
+/* Styling for the testimonial quote */
 .testimonial-quote {
     font-size: 15px;
     color: #000000;
     margin: 20px 0;
 }
 
+/* Attribution styling for author name and title */
 .attribution {
     margin-top: 10px;
     font-size: 16px;
@@ -57,12 +67,13 @@
 }
 
 .author-title {
-    color: #777; /* Grey for author's title */
+    color: #777;
 }
 
+/* Styling for navigation arrows */
 .navigation-arrows {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -71,15 +82,101 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #6a0dad; /* Purple color for arrows */
+    color: #6a0dad;
+    margin: 0 10px;
 }
 
 .arrow:hover {
-    color: #0c0114; /* Change color on hover */
+    color: #0c0114;
 }
+
+/* Styling for the heading line */
 .head-line {
-    width: 20%; /* Set the width of the line */
-    height: 2px; /* Thickness of the line */
-    background: linear-gradient(to right, rgb(172, 37, 199) 0%, rgb(218, 171, 230) 70%, rgba(106, 0, 218, 0) 100%); /* Gradient from thick to thin */
-    margin: 5px auto; /* Center the line */
+    width: 20%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(172, 37, 199) 0%, rgb(218, 171, 230) 70%, rgba(106, 0, 218, 0) 100%);
+    margin: 5px auto;
+}
+
+/* Mobile and tablet responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the section padding and alignment */
+    .testimonial-section {
+        padding: 30px 15px;
+        max-width: 100%;
+    }
+
+    /* Adjust the testimonial heading size */
+    .testimonial-heading {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust testimonial card to stack its content */
+    .testimonial-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Make the quote mark smaller and adjust position */
+    .quote-mark {
+        font-size: 36px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    /* Adjust quote text size */
+    .testimonial-quote {
+        font-size: 14px;
+    }
+
+    /* Adjust attribution font size */
+    .attribution {
+        font-size: 14px;
+    }
+
+    /* Adjust navigation arrows for small screens */
+    .navigation-arrows {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    /* Adjust heading line width for smaller screens */
+    .head-line {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens (smartphones in portrait) */
+    .testimonial-heading {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .testimonial-quote {
+        font-size: 12px;
+    }
+
+    .attribution {
+        font-size: 12px;
+    }
+
+    .arrow {
+        font-size: 18px;
+    }
+
+    .head-line {
+        width: 40%;
+    }
 }

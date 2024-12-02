@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const SignUp = () => {
     return (
         <div className='signup'>
-            <div>
+            <div className='icon'>
             <i class="fa-solid fa-arrow-right-to-bracket" style={{ fontSize: '200px', color: '#4d0581' }}></i>
             </div>
             <div className="text">

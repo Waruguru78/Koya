@@ -1,3 +1,5 @@
+/* src/components/Courses.css */
+
 .courses {
     background-color: #af62ee;
     font-family: 'Inknut Antiqua', serif;
@@ -18,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;  /* Added to allow wrapping on smaller screens */
 }
 
 .courses-heading {
@@ -26,31 +29,35 @@
     font-family: 'Inknut Antiqua', serif;
     margin-right: 40px;
     white-space: nowrap;
+    margin-bottom: 20px; /* Added for spacing */
 }
 
 .courses-cards {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap; /* Added for wrapping on small screens */
+    justify-content: center; /* Ensures cards are centered on small screens */
 }
 
 .course-card {
     background-color: #8A3BF2;
     color: whitesmoke;
-    padding: 20px; /* Adjusted padding */
+    padding: 20px;
     border-radius: 20px;
-    width: 350px; /* Adjusted width */
+    width: 350px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    margin-bottom: 20px; /* Added margin for better spacing */
 }
 
 .course-card h3 {
-    font-size: 22px; /* Adjusted font size */
+    font-size: 22px;
     margin-bottom: 15px;
     color: #fcfcfc;
 }
 
 .course-card p {
-    font-size: 20px; /* Adjusted font size */
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 30px;
     color: #fcfcfc;
@@ -100,7 +107,57 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .courses-layout {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align for smaller screens */
+    }
+
+    .courses-heading {
+        font-size: 36px; /* Adjust font size */
+        margin-bottom: 20px; /* Margin for spacing */
+    }
+
+    .courses-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two cards per row */
+        gap: 20px; /* Adjust gap between cards */
+        justify-items: center; /* Center the cards */
+    }
+
     .course-card {
         width: 100%; /* Full width on smaller screens */
+    }
+
+    .view-all-btn {
+        margin-right: 0; /* Remove the negative margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-heading {
+        font-size: 28px; /* Smaller font size on very small screens */
+        margin-bottom: 15px;
+    }
+    .course-card{
+        display: none;
+    }
+
+    .courses-cards {
+        grid-template-columns: 1fr; /* Single column layout on very small screens */
+        gap: 10px; /* Reduced gap */
+    }
+
+    .course-card {
+        width: 100%; /* Full width for each card */
+    }
+
+    .read-more-btn {
+        font-size: 12px; /* Smaller button font */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .view-all-btn {
+        font-size: 12px; /* Smaller font size */
+        padding: 8px 18px; /* Adjust padding */
     }
 }

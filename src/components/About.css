@@ -10,7 +10,7 @@
 
 /* About Heading Styles */
 .about-heading {
-    font-family: 'Inknut Antiqua', serif; /* Font as specified */
+    font-family: 'Inknut Antiqua', serif;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -21,26 +21,27 @@
     content: "";
     width: 80px;
     height: 3px;
-    background: linear-gradient(to right, #6a0dad 0%, #9256bd 70%, rgba(106, 0, 218, 0) 100%); /* Gradient from thick to thin */
+    background: linear-gradient(to right, #6a0dad 0%, #9256bd 70%, rgba(106, 0, 218, 0) 100%);
     display: block;
     margin: 10px auto 0 auto;
 }
 
 .about-container {
-    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 20px;
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
     padding: 40px 20px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
     width: 90%;
     max-width: 1000px;
 }
+
 /* About Cards Container */
 .about-cards {
     display: flex;
-    flex-direction: column; /* Vertical arrangement */
+    flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between cards */
+    gap: 10px;
 }
 
 /* Individual Card Styles */
@@ -68,10 +69,10 @@
 
 /* Image on the Left */
 .card-image {
-    width: 100px; /* Smaller image */
+    width: 100px;
     height: auto;
     border-radius: 10px;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
     margin-right: 20px;
     float: left;
 }
@@ -95,7 +96,7 @@
     content: "";
     width: 10%;
     height: 3px;
-    background: linear-gradient(to right, #6a0dad 0%, #9256bd 70%, rgba(106, 0, 218, 0) 100%); /* Gradient from thick to thin */
+    background: linear-gradient(to right, #6a0dad 0%, #9256bd 70%, rgba(106, 0, 218, 0) 100%);
     display: block;
     margin-top: 5px;
 }
@@ -114,10 +115,28 @@
     }
 
     .about-card.indented {
-        margin-left: 0;
+        margin-left: 0; /* Remove the indentation for smaller screens */
     }
 
     .card-image {
         margin-bottom: 15px;
+        width: 80px; /* Adjust image size for small screens */
+    }
+
+    .about-heading {
+        font-size: 28px; /* Reduce font size of the heading */
+    }
+
+    .card-title {
+        font-size: 20px; /* Reduce card title font size */
+    }
+
+    .card-content p {
+        font-size: 14px; /* Adjust paragraph font size for mobile */
+    }
+
+    .about-container {
+        padding: 20px 10px; /* Reduce padding */
+        margin: 10px auto; /* Adjust margin */
     }
 }

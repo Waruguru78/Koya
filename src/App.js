@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import Home from './components/Home';
-import About from './components/About'; 
+import About from './components/About';
 import Courses from './components/Courses';
 import SignUp from './components/SignUp';
 import Testimonial from './components/Testimonials';
@@ -14,18 +15,36 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Home />
-            <About />
-            <SignUp />
-            <Testimonial />
-            <Courses />
-            <Why />
-            <Footer />
-          </>
-        } />
-        <Route path="/allcourses" element={<AllCourses />} /> {/* All Courses route */}
+        <Route
+          path="/"
+          element={
+            <>
+              {/* Wrap each section with <Element> and assign a unique 'name' prop */}
+              <Element name="home">
+                <Home />
+              </Element>
+              <Element name="about">
+                <About />
+              </Element>
+              <Element name="signup">
+                <SignUp />
+              </Element>
+              <Element name="testimonials">
+                <Testimonial />
+              </Element>
+              <Element name="courses">
+                <Courses />
+              </Element>
+              <Element name="Why">
+                <Why />
+              </Element>
+              <Element name="footer">
+                <Footer />
+              </Element>
+            </>
+          }
+        />
+        <Route path="/allcourses" element={<AllCourses />} />
       </Routes>
     </Router>
   );
