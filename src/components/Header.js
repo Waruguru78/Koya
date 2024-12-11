@@ -4,6 +4,7 @@ import logo from '../logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom for navigation
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,17 +63,6 @@ const Header = () => {
           </li>
           <li>
             <ScrollLink
-              to="team"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Team Koya
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
               to="testimonials"
               smooth={true}
               duration={500}
@@ -85,16 +75,9 @@ const Header = () => {
         </ul>
 
         {/* Contact Button */}
-        <ScrollLink
-          to="contact"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="contact-btn"
-          onClick={() => setIsMenuOpen(false)}
-        >
+        <Link to="/contact" className="contact-btn" onClick={() => setIsMenuOpen(false)}>
           Contact Us
-        </ScrollLink>
+        </Link>
       </nav>
     </header>
   );

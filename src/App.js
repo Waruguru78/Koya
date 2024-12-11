@@ -9,6 +9,7 @@ import AllCourses from './components/AllCourses';
 import Header from './components/Header';
 import Why from './components/why';
 import Footer from './components/Footer';
+import Contact from './components/Contact';  // Import the new Contact component
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           }
         />
         <Route path="/allcourses" element={<AllCourses />} />
+        <Route path="/contact" element={<Contact />} /> {/* Add the contact route */}
       </Routes>
     </Router>
   );

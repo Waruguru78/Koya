@@ -1,0 +1,49 @@
+.contact-page {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #E1B3EB 0%, #ecc7f5 20%, #ffffff 100%);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-form input, .contact-form select {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #6f1bc4;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #1d083f;
+}
+
+/* Contact Us Button */
+.contact-btn {
+  background-color: transparent;
+  border: 2px solid #7d43f1;
+  color: #7d43f1;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #7d43f1;
+  color: #fff;
+}
+
