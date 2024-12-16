@@ -11,7 +11,7 @@ const Home = () => {
                         Learn, build and lead <br /> in the <span className="highlight">digital world.</span>
                     </h1>
                     <p className="hero-subtitle">Empowering innovators with future-ready tech skills</p>
-                    <button className="get-started-button">Get Started</button>
+                    <button className="get-started-button">The future begins here!</button>
                 </div>
                 <div className="hero-image">
                     <img src={astronautImage} alt="Astronaut" />

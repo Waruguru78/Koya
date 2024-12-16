@@ -1,36 +1,72 @@
+/* General Styling for the Contact Page */
 .contact-page {
   padding: 20px;
   text-align: center;
   background: linear-gradient(to bottom, #E1B3EB 0%, #ecc7f5 20%, #ffffff 100%);
+  min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
+/* Form Container Styling */
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  max-width: 600px; /* Wider form width */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff; /* White background for the form */
+  padding: 30px; /* Add internal spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.contact-form input, .contact-form select {
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 300px;
-  border-radius: 5px;
+/* Input and Select Field Styling */
+.contact-form input,
+.contact-form select {
+  margin-bottom: 15px; /* Space between input fields */
+  padding: 12px; /* Inner padding for input fields */
+  width: 100%; /* Input fields span full width of the form */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for better readability */
+  box-sizing: border-box; /* Prevent padding from affecting width */
+  transition: border-color 0.3s ease; /* Smooth border change on focus */
 }
 
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: #7d43f1; /* Highlighted border on focus */
+  outline: none;
+}
+
+/* Label Styling */
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; /* Space between label and input */
+  text-align: left; /* Align labels to the left */
+  width: 100%;
+}
+
+/* Submit Button Styling */
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #6f1bc4;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
+  padding: 12px 20px; /* Button padding */
+  background-color: #6f1bc4; /* Purple background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded button shape */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  background-color: #1d083f;
+  background-color: #7d43f1; /* Darker purple on hover */
+  transform: scale(1.05); /* Slight zoom-in effect */
 }
 
-/* Contact Us Button */
+/* Contact Us Button Styling (Header Button) */
 .contact-btn {
   background-color: transparent;
   border: 2px solid #7d43f1;
@@ -46,4 +82,3 @@
   background-color: #7d43f1;
   color: #fff;
 }
-

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,7 +9,7 @@ import AllCourses from './components/AllCourses';
 import Header from './components/Header';
 import Why from './components/why';
 import Footer from './components/Footer';
-import Contact from './components/Contact';  // Import the new Contact component
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
           path="/"
           element={
             <>
-              {/* Wrap each section with <Element> and assign a unique 'name' prop */}
               <Element name="home">
                 <Home />
               </Element>
@@ -46,7 +45,7 @@ function App() {
           }
         />
         <Route path="/allcourses" element={<AllCourses />} />
-        <Route path="/contact" element={<Contact />} /> {/* Add the contact route */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

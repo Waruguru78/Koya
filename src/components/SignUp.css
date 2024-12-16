@@ -39,7 +39,7 @@ form {
     margin-top: 60px;
   }
   
-  input[type="text"] {
+  input[type="email"] {
     padding: 5px;
     border: none;
     border-radius: 25px;
@@ -96,7 +96,7 @@ form {
       width: 90%; /* Adjust width to fit smaller screens */
   }
 
-  input[type="text"] {
+  input[type="email"] {
       width: 90%; /* Adjust width to fit smaller screens */
       max-width: 400px; /* Maintain a maximum width */
       font-size: 13px; /* Reduce font size for input text */

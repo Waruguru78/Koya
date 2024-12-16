@@ -41,11 +41,11 @@
 }
 
 .get-started-button {
-    background-color: #6a0dad;
-    color: white;
+    background-color: #dcb3f9;
+    color: #661f99;
     padding: 12px 20px;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;

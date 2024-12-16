@@ -1,32 +1,59 @@
-// In Contact.js
-import React from 'react';
-import './Contact.css'; // If you have a CSS file
+import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import './Contact.css';
 
 const Contact = () => {
+  const form = useRef();
+  const navigate = useNavigate(); // Hook for navigation
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_eqfu6vc',
+        'template_v8jne88',
+        form.current,
+        'wNIIiOaxnSdPUb8oi'
+      )
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          navigate('/'); // Navigate back to the home page
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <div className="contact-page">
-        <h1>Koya Tech</h1>
       <h1>Contact Us</h1>
-      <form className="contact-form">
+      <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="user_name" required />
         </div>
         <div>
           <label htmlFor="phone">Phone:</label>
-          <input type="text" id="phone" name="phone" required />
+          <input type="text" id="phone" name="user_phone" required />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="user_email" required />
         </div>
         <div>
           <label htmlFor="course">Select Course:</label>
-          <select id="course" name="course">
-            <option value="Full Stack web Development">Web Development</option>
+          <select id="course" name="user_course">
+            <option value="Full Stack Web Development">Web Development</option>
             <option value="Data Science & Analysis">Data Science</option>
             <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Cyber Security">Cyber SEcurity</option>
+            <option value="Cyber Security">Cyber Security</option>
             <option value="Mobile App Development">Mobile App Development</option>
             <option value="Cloud Computing">Cloud Computing</option>
           </select>
@@ -37,4 +64,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; // Default export
+export default Contact;
