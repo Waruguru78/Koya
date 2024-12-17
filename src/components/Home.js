@@ -1,8 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css'; // Import the CSS file for styling
 import astronautImage from '../homebg.jpg'; // Import your astronaut image
 
+
 const Home = () => {
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    // Function to handle navigation
+    const handleNavigate = () => {
+        navigate('/allcourses'); // Navigate to AllCourses page
+    };
+
     return (
         <div className="home">
             <div className="hero-section">
@@ -11,7 +20,7 @@ const Home = () => {
                         Learn, build and lead <br /> in the <span className="highlight">digital world.</span>
                     </h1>
                     <p className="hero-subtitle">Empowering innovators with future-ready tech skills</p>
-                    <button className="get-started-button">The future begins here!</button>
+                    <button className="get-started-button" onClick={handleNavigate}>The future begins here!</button>
                 </div>
                 <div className="hero-image">
                     <img src={astronautImage} alt="Astronaut" />

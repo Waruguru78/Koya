@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // Make sure axios is installed
 import './AllCourses.css'; // Import your CSS file for this page
 
-const courses = [
-    { title: "Fullstack Web Development", description: "Learn to build robust web applications from front to back.", buttonText: "Read More" },
-    { title: "UI/UX Design", description: "Master the skills of user experience and interface design.", buttonText: "Read More" },
-    { title: "Data Science & Analytics", description: "Unlock the power of data and make informed decisions.", buttonText: "Read More" },
-    { title: "AI and Machine Learning", description: "Explore the world of AI and machine learning.", buttonText: "Read More" },
-    { title: "Cyber Security", description: "Gain expertise in securing digital environments.", buttonText: "Read More" },
-    { title: "Mobile Application Development", description: "Design and develop applications for mobile platforms.", buttonText: "Read More" },
-    { title: "Cloud Computing", description: "Understand cloud infrastructure and build scalable applications.", buttonText: "Read More" },
-    { title: "Blockchain Development", description: "Delve into blockchain technology and decentralized applications.", buttonText: "Read More" },
-    { title: "Digital Marketing", description: "Learn to effectively market products and services online.", buttonText: "Read More" }
-];
-
 const AllCourses = () => {
+    const [courses, setCourses] = useState([]);  // State to store courses data
+    const [loading, setLoading] = useState(true); // Loading state
+
+    // Fetch courses data when the component mounts
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/api/courses'); // API endpoint for courses
+                setCourses(response.data); // Set the fetched courses data
+                setLoading(false); // Set loading to false once data is fetched
+            } catch (error) {
+                console.error("Error fetching courses data:", error);
+                setLoading(false); // Set loading to false even in case of error
+            }
+        };
+
+        fetchCourses();
+    }, []); // Empty dependency array to run the effect once when the component mounts
+
+    // Render loading state if data is still being fetched
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="all-courses-page">
             {/* Heading Section */}
@@ -22,20 +35,13 @@ const AllCourses = () => {
                 <p>Code Your Future</p>
             </header>
 
-            {/* Wave Divider Between Heading and Courses */}
-            <div className="custom-shape-divider-bottom-1729611167">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-                </svg>
-            </div>
-
             {/* Grid of Courses */}
             <div className="courses-grid">
                 {courses.map((course, index) => (
                     <div key={index} className="course-card">
-                        <h3>{course.title}</h3>
-                        <p>{course.description}</p>
-                        <button className="read-more-btn">{course.buttonText}</button>
+                        <h3>{course.Name}</h3> {/* Changed from title to Name */}
+                        <p>{course.Description}</p> {/* Changed from description */}
+                        <p><strong>Duration:</strong> {course.Duration}</p> {/* Added Duration */}
                     </div>
                 ))}
             </div>

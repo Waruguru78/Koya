@@ -1,7 +1,7 @@
 .why-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1600px;
     margin: 50px auto;
     padding: 20px;

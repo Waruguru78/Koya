@@ -10,11 +10,12 @@ import Header from './components/Header';
 import Why from './components/why';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import EventDetails from './components/EventDetails'; 
 
 function App() {
   return (
     <Router>
-      <Header />
+      <Header />  {/* The Header component is always visible */}
       <Routes>
         <Route
           path="/"
@@ -46,6 +47,7 @@ function App() {
         />
         <Route path="/allcourses" element={<AllCourses />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/events/:id" element={<EventDetails />} /> 
       </Routes>
     </Router>
   );

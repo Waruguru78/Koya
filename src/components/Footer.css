@@ -96,7 +96,7 @@ img {
 }
 
 .footer-links ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -110,7 +110,13 @@ img {
     /* text-decoration: underline; */
     color: #6a0dad;
 }
-
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: #6a0dad;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {

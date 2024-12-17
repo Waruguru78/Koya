@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logo from '../logo.png';
+import logo from '../Tech.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link as ScrollLink } from 'react-scroll';
@@ -17,9 +17,11 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="navbar">
-        {/* Logo */}
+        {/* Logo - Clicking the logo takes you to the home page */}
         <div className="logo">
-          <img src={logo} alt="Koya Logo" />
+          <Link to="/">
+            <img src={logo} alt="Koya Logo" />
+          </Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -29,17 +31,14 @@ const Header = () => {
 
         {/* Navigation Links */}
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li>
-            <ScrollLink
-              to="home"
-              smooth={true}
-              duration={500}
-              offset={-70}
+        <li>
+            <Link
+              to="/"
               onClick={() => setIsMenuOpen(false)}
               className={location.pathname === '/' ? 'active' : ''}
             >
               Home
-            </ScrollLink>
+            </Link>
           </li>
           <li>
             <ScrollLink
@@ -54,17 +53,6 @@ const Header = () => {
           </li>
           <li>
             <ScrollLink
-              to="courses"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Courses
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
               to="testimonials"
               smooth={true}
               duration={500}
@@ -72,6 +60,17 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="courses"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Courses
             </ScrollLink>
           </li>
         </ul>

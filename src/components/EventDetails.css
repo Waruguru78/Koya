@@ -1,0 +1,56 @@
+body{
+  background: linear-gradient(to bottom, #E1B3EB 0%, #ecc7f5 20%, #ffffff 100%);
+}
+.event-details-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Inknut Antiqua', serif;
+    color: #333;
+    border-radius: 10px;
+    align-items: center;
+  }
+  
+  .event-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #000000;
+  }
+  
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .event-info {
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  .event-info h2, .event-info h3 {
+    color: #000000;
+    margin: 0.5rem 0;
+  }
+  
+  .event-info p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .loading, .error {
+    font-size: 1.5rem;
+    color: #dc3545;
+    margin-top: 2rem;
+  }
+ 

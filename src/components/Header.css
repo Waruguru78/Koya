@@ -28,8 +28,7 @@
 .logo img {
   height: 60px; /* Adjust height of logo */
   width: 100px;
-  border-radius: 30px;
-  padding: 5px;
+  padding: 2px;
 }
 
 /* Styling the navigation links */
